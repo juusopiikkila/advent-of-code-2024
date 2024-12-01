@@ -1,0 +1,30 @@
+{
+    "extends": [
+        "@meiko/typescript",
+        "@meiko/typescript/node"
+    ],
+    "root": true,
+    "env": {
+        "node": true,
+        "es6": true
+    },
+    "parserOptions": {
+        "parser": "@typescript-eslint/parser",
+        "ecmaVersion": "latest",
+        "project": "./tsconfig.json"
+    },
+    "rules": {
+        "unicorn/prefer-top-level-await": "off",
+        "no-console": "off"
+    },
+    "overrides": [
+        {
+            "files": [
+                "template/**/*.ts"
+            ],
+            "rules": {
+                "@typescript-eslint/no-unused-vars": "off"
+            }
+        }
+    ]
+}
